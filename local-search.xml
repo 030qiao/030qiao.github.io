@@ -12,6 +12,12 @@
     
     
     
+    <tags>
+      
+      <tag>电子取证</tag>
+      
+    </tags>
+    
   </entry>
   
   
@@ -44,18 +50,30 @@
     
     
     
+    <tags>
+      
+      <tag>电子取证</tag>
+      
+    </tags>
+    
   </entry>
   
   
   
   <entry>
-    <title>电子取证-ceshi</title>
-    <link href="/2024/04/11/%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81-ceshi/"/>
-    <url>/2024/04/11/%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81-ceshi/</url>
+    <title>ceshi</title>
+    <link href="/2024/04/11/ceshi/"/>
+    <url>/2024/04/11/ceshi/</url>
     
-    <content type="html"><![CDATA[<p>不要见怪，不要见外，田。</p><p>​——《平凡的世界》</p><br/><br/><br/><h1 id="解题过程"><a href="#解题过程" class="headerlink" title="解题过程"></a>解题过程</h1><p>1.请计算该检材源盘的SHA256哈希值。</p><p>bf3f4e9aa5a4721be72b90286cba43e6ec7b29ca33cd9d1fd00406cf950be725</p><p><img src="/mdimg/ceshi/1.png" alt="1"></p><br/><p>2.该服务器的内核版本。</p><p>7.6.1810</p><p><img src="/mdimg/ceshi/2.jpg" alt="img"></p><p>命令 <code>uname -r</code> 查看 内核版本命令</p><p>命令<code>uname -a</code> 查看系统信息</p><br/><p>3.请找出该服务器中监听端口11211对应的服务是。</p><p>memacached</p><p>查看监听端口 <code>netstat -anpt</code></p><p><img src="/mdimg/ceshi/3.jpg" alt="img"></p><p><code>netstat -tunlp</code>查看所有进程</p><p><code>lsof -i: 11211</code> 查看特定进程具体信息</p><p>拓展：memcached是内存缓存进程</p><br/><p>4.通过嫌疑人操作命令发现其曾经有删除过一个文件是</p><p>bb10c86df29d83f4c46209dbe23de7e069e5eb9ddf13233d323b880fb5639a36</p><p>rm 是linux的删除命令</p><p>（<img src="/mdimg/ceshi/4.jpg" alt="img"></p><br/><p>5.请找出服务器中使用何种工具管理网站</p><p>宝塔</p><p>也可以<code>ps aus</code>查看所有进程</p><p>www&#x2F;server apache docker可以大致猜测出事宝塔的配置。</p><br/><p>6.请找出该工具绑定的手机号是</p><p>18627943382</p><p><img src="/mdimg/ceshi/5.jpg" alt="img"></p><br/><p>7.请找出其管理的网站域名共有多少个。</p><p>2 ×</p><p>直接火眼查看</p><p>有师傅做出来是三个。网站不等于域名。</p><br/><p>8.请找出服务器曾经删除的一个网站，其域名是</p><p>fastadmin.com</p><p><img src="/mdimg/ceshi/6.jpg" alt="img"></p><br/><p>9.请找出该服务器docker容器共有多少个</p><p>3</p><p>火眼直接查看</p><br/><p>10.请找出dokcer容器名为zealous_driscoll的容器ID是</p><p>72b3c398c8e54dc34132805acda5937976be39e578ed6bc292e134c192f16629</p><br/><p>11.请找出该视频网站的网站源码存储路径</p><p>&#x2F;www&#x2F;wwwroot&#x2F;<a href="http://www.app10.com/">www.app10.com</a></p><p>题目不全，这里应该指的是app10这个网站源码存储路径。</p><p>这里涉及到<strong>网站重构</strong>，直接到宝塔面板查看。</p><p>网站重构的知识点会在后面进行补充。</p><p><img src="/mdimg/ceshi/7.jpg" alt="img"></p><br/><p>12.请找出该视频服务器网站成功连接日志名</p><p>不知道说啥</p><br/><p>13.请找出该服务器中视频网站的后台url。</p><p>admin-cp</p><p><img src="/mdimg/ceshi/13.png" alt="img"></p><br/><p>14.请找出该视频网站所用数据库的端口。</p><br/><p>15.请找出该视频网站数据库“honglian”的密码。（5分）</p><p>这里不是去找config.php，而是进入到数据库中，解密admin的密码</p><p>为123456</p><p><img src="/mdimg/ceshi/10.png" alt="img"></p><br/><p>16.请固定该视频网站中“弘连宣传视频1”中视频文件的MD5值。（5分）</p><p>4758a0b9a9c0ca4f62aed610943052b5</p><p><img src="/mdimg/ceshi/11.png" alt="img"></p><br/><p>17.该视频网站电子邮箱为（5分）</p><p><a href="mailto:&#x33;&#51;&#x33;&#x33;&#51;&#51;&#51;&#51;&#x33;&#x33;&#64;&#x31;&#54;&#51;&#46;&#x63;&#x6f;&#x6d;">&#x33;&#51;&#x33;&#x33;&#51;&#51;&#51;&#51;&#x33;&#x33;&#64;&#x31;&#54;&#51;&#46;&#x63;&#x6f;&#x6d;</a></p><p><img src="/mdimg/ceshi/14.png" alt="img"></p><br/><p>18.该视频网站用户有多少个（5分）</p><p>5</p><br/><p>19.该视频网站后台限制视频上传最大是多少（5分）</p><p>10GB</p><p><img src="/mdimg/ceshi/15.png" alt="img"></p><br/><p>20.找出该视频网站登录时密码采用的加密方式（5分）</p><p>sha1</p><p><img src="/mdimg/ceshi/16.png" alt="img"></p><p><br/><br/><br/><br/><br/></p><h1 id="补充知识点"><a href="#补充知识点" class="headerlink" title="补充知识点"></a>补充知识点</h1><h3 id="连接XSHELL"><a href="#连接XSHELL" class="headerlink" title="连接XSHELL"></a>连接XSHELL</h3><br/><p>根据公众号<a href="https://mp.weixin.qq.com/s/nCf1Ark9KCR0p74WEYcToQ">https://mp.weixin.qq.com/s/nCf1Ark9KCR0p74WEYcToQ</a></p><p>因为这里想要连接xshell，可以尝试更改本地的虚拟网络适配器。</p><p>但是这里主机的ip和网关错误， 只能尝试更改DHCP，也就是进入主机修改网卡配置。</p><br><p>首先ifconfig查看网络连接情况，查看到ens33是主机</p><p>cd &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F; 进入到网卡的界面</p><p>ls查看内容 有icfg-ens33和ifcfg-ens33 找到可编辑的那个</p><p><img src="/mdimg/ceshi/17.png" alt="img"></p><p>ipADDR和gateway都注释掉，让系统自己去配置。netmask改为255.255.255.0</p><p>或者IPADDR改为主机网段中的一个，GATEWAY改为主机网段.2</p><p>再重启网络配置<code>service network restart</code></p><p>就可以用xshell连接</p><br><p>总的来说就是：仿真修改虚拟网络配置，再修改主机网卡配置。</p><br><h4 id="Linux命令"><a href="#Linux命令" class="headerlink" title="Linux命令"></a>Linux命令</h4><br><p><code>uname -r</code></p><p><code>uname -a</code></p><p><code>netstat -anpt</code></p><p><code>netstat -tunlp</code></p><p><code>lsof -i: 11211</code></p><h3 id="docker取证"><a href="#docker取证" class="headerlink" title="docker取证"></a>docker取证</h3><br><p>docker ps -a 显示所有容器</p><p>docker inspect 容器ID前两位 可以看到完整的容器信息</p><br><br><h3 id="网站重构"><a href="#网站重构" class="headerlink" title="网站重构"></a>网站重构</h3><p>直接点击域名会跳转到公网上的网站，需要指定hosts文件。</p><p>再点击时发现数据库配置错误。</p><p>网站源码里面一般都有数据库连接密码，config.php</p><p>一般来说mysql就在电脑上， 这题复杂一点，mysql在docker容器里。</p><p>启动<code>docker ps -a</code> <code>docker start 容器id前2</code></p><p>这时登录网站即可</p><h3 id="其他大佬的新思路"><a href="#其他大佬的新思路" class="headerlink" title="其他大佬的新思路"></a>其他大佬的新思路</h3><p>宝塔面板登录信息 www&#x2F;sercer&#x2F;panel&#x2F;data&#x2F;userinfo.json</p>]]></content>
+    <content type="html"><![CDATA[<p>不要见怪，不要见外，田。</p><p>​——《平凡的世界》</p><br/><br/><br/><h1 id="解题过程"><a href="#解题过程" class="headerlink" title="解题过程"></a>解题过程</h1><p>1.请计算该检材源盘的SHA256哈希值。</p><p>bf3f4e9aa5a4721be72b90286cba43e6ec7b29ca33cd9d1fd00406cf950be725</p><p><img src="/mdimg/ceshi/1.png" alt="1"></p><br/><p>2.该服务器的内核版本。</p><p>7.6.1810</p><p><img src="/mdimg/ceshi/2.jpg" alt="img"></p><p>命令 <code>uname -r</code> 查看 内核版本命令</p><p>命令<code>uname -a</code> 查看系统信息</p><br/><p>3.请找出该服务器中监听端口11211对应的服务是。</p><p>memacached</p><p>查看监听端口 <code>netstat -anpt</code></p><p><img src="/mdimg/ceshi/3.jpg" alt="img"></p><p><code>netstat -tunlp</code>查看所有进程</p><p><code>lsof -i: 11211</code> 查看特定进程具体信息</p><p>拓展：memcached是内存缓存进程</p><br/><p>4.通过嫌疑人操作命令发现其曾经有删除过一个文件是</p><p>bb10c86df29d83f4c46209dbe23de7e069e5eb9ddf13233d323b880fb5639a36</p><p>rm 是linux的删除命令</p><p>（<img src="/mdimg/ceshi/4.jpg" alt="img"></p><br/><p>5.请找出服务器中使用何种工具管理网站</p><p>宝塔</p><p>也可以<code>ps aus</code>查看所有进程</p><p>www&#x2F;server apache docker可以大致猜测出事宝塔的配置。</p><br/><p>6.请找出该工具绑定的手机号是</p><p>18627943382</p><p><img src="/mdimg/ceshi/5.jpg" alt="img"></p><br/><p>7.请找出其管理的网站域名共有多少个。</p><p>2 ×</p><p>直接火眼查看</p><p>有师傅做出来是三个。网站不等于域名。</p><br/><p>8.请找出服务器曾经删除的一个网站，其域名是</p><p>fastadmin.com</p><p><img src="/mdimg/ceshi/6.jpg" alt="img"></p><br/><p>9.请找出该服务器docker容器共有多少个</p><p>3</p><p>火眼直接查看</p><br/><p>10.请找出dokcer容器名为zealous_driscoll的容器ID是</p><p>72b3c398c8e54dc34132805acda5937976be39e578ed6bc292e134c192f16629</p><br/><p>11.请找出该视频网站的网站源码存储路径</p><p>&#x2F;www&#x2F;wwwroot&#x2F;<a href="http://www.app10.com/">www.app10.com</a></p><p>题目不全，这里应该指的是app10这个网站源码存储路径。</p><p>这里涉及到<strong>网站重构</strong>，直接到宝塔面板查看。</p><p>网站重构的知识点会在后面进行补充。</p><p><img src="/mdimg/ceshi/7.jpg" alt="img"></p><br/><p>12.请找出该视频服务器网站成功连接日志名</p><p>不知道说啥</p><br/><p>13.请找出该服务器中视频网站的后台url。</p><p>admin-cp</p><p><img src="/mdimg/ceshi/13.png" alt="img"></p><br/><p>14.请找出该视频网站所用数据库的端口。</p><br/><p>15.请找出该视频网站数据库“honglian”的密码。（5分）</p><p>这里不是去找config.php，而是进入到数据库中，解密admin的密码</p><p>为123456</p><p><img src="/mdimg/ceshi/10.png" alt="img"></p><br/><p>16.请固定该视频网站中“弘连宣传视频1”中视频文件的MD5值。（5分）</p><p>4758a0b9a9c0ca4f62aed610943052b5</p><p><img src="/mdimg/ceshi/11.png" alt="img"></p><br/><p>17.该视频网站电子邮箱为（5分）</p><p><a href="mailto:&#51;&#x33;&#x33;&#x33;&#51;&#x33;&#51;&#x33;&#x33;&#x33;&#x40;&#49;&#54;&#51;&#x2e;&#x63;&#x6f;&#109;">&#51;&#x33;&#x33;&#x33;&#51;&#x33;&#51;&#x33;&#x33;&#x33;&#x40;&#49;&#54;&#51;&#x2e;&#x63;&#x6f;&#109;</a></p><p><img src="/mdimg/ceshi/14.png" alt="img"></p><br/><p>18.该视频网站用户有多少个（5分）</p><p>5</p><br/><p>19.该视频网站后台限制视频上传最大是多少（5分）</p><p>10GB</p><p><img src="/mdimg/ceshi/15.png" alt="img"></p><br/><p>20.找出该视频网站登录时密码采用的加密方式（5分）</p><p>sha1</p><p><img src="/mdimg/ceshi/16.png" alt="img"></p><p><br/><br/><br/><br/><br/></p><h1 id="补充知识点"><a href="#补充知识点" class="headerlink" title="补充知识点"></a>补充知识点</h1><h3 id="连接XSHELL"><a href="#连接XSHELL" class="headerlink" title="连接XSHELL"></a>连接XSHELL</h3><br/><p>根据公众号<a href="https://mp.weixin.qq.com/s/nCf1Ark9KCR0p74WEYcToQ">https://mp.weixin.qq.com/s/nCf1Ark9KCR0p74WEYcToQ</a></p><p>因为这里想要连接xshell，可以尝试更改本地的虚拟网络适配器。</p><p>但是这里主机的ip和网关错误， 只能尝试更改DHCP，也就是进入主机修改网卡配置。</p><br><p>首先ifconfig查看网络连接情况，查看到ens33是主机</p><p>cd &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F; 进入到网卡的界面</p><p>ls查看内容 有icfg-ens33和ifcfg-ens33 找到可编辑的那个</p><p><img src="/mdimg/ceshi/17.png" alt="img"></p><p>ipADDR和gateway都注释掉，让系统自己去配置。netmask改为255.255.255.0</p><p>或者IPADDR改为主机网段中的一个，GATEWAY改为主机网段.2</p><p>再重启网络配置<code>service network restart</code></p><p>就可以用xshell连接</p><br><p>总的来说就是：仿真修改虚拟网络配置，再修改主机网卡配置。</p><br><h4 id="Linux命令"><a href="#Linux命令" class="headerlink" title="Linux命令"></a>Linux命令</h4><br><p><code>uname -r</code></p><p><code>uname -a</code></p><p><code>netstat -anpt</code></p><p><code>netstat -tunlp</code></p><p><code>lsof -i: 11211</code></p><h3 id="docker取证"><a href="#docker取证" class="headerlink" title="docker取证"></a>docker取证</h3><br><p>docker ps -a 显示所有容器</p><p>docker inspect 容器ID前两位 可以看到完整的容器信息</p><br><br><h3 id="网站重构"><a href="#网站重构" class="headerlink" title="网站重构"></a>网站重构</h3><p>直接点击域名会跳转到公网上的网站，需要指定hosts文件。</p><p>再点击时发现数据库配置错误。</p><p>网站源码里面一般都有数据库连接密码，config.php</p><p>一般来说mysql就在电脑上， 这题复杂一点，mysql在docker容器里。</p><p>启动<code>docker ps -a</code> <code>docker start 容器id前2</code></p><p>这时登录网站即可</p><h3 id="其他大佬的新思路"><a href="#其他大佬的新思路" class="headerlink" title="其他大佬的新思路"></a>其他大佬的新思路</h3><p>宝塔面板登录信息 www&#x2F;sercer&#x2F;panel&#x2F;data&#x2F;userinfo.json</p>]]></content>
     
     
+    
+    <tags>
+      
+      <tag>电子取证</tag>
+      
+    </tags>
     
   </entry>
   
